@@ -47,7 +47,7 @@ bus = smbus.SMBus(I2C_CH)
 
 ###Send DEVICE_REG 0x10  -  [0xC,0x17,0x22,0x2D]
 ##Form1:
-#bus.write_i2c_block_data(DEVICE_ADDRESS, DEVICE_REG, [12, 23, 34, 45])
+bus.write_i2c_block_data(DEVICE_ADDRESS, MASTER_WRITE_CMD, [12, 23, 34, 45])
 ##Form2:
 #bus.write_i2c_block_data(DEVICE_ADDRESS, DEVICE_REG, buffer_tx) 
 
